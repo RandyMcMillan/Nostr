@@ -11,10 +11,16 @@ let dependencies: [Package.Dependency]
         .package(url: "https://github.com/csjones/lefthook.git", branch: "swift"),
         .package(url: "https://github.com/nicklockwood/SwiftFormat.git", from: "0.49.5"),
         .package(url: "https://github.com/realm/SwiftLint.git", from: "0.46.5"),
-        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0")
+        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+        .package(url: "https://github.com/daltoniam/Starscream.git", branch: "master"),
+        .package(url: "https://github.com/jb55/secp256k1.swift.git", branch: "main")
     ]
 #else
-    dependencies = []
+    dependencies = [
+        // Dependencies declare other packages that this package depends on.
+        .package(url: "https://github.com/daltoniam/Starscream.git", branch: "master"),
+        .package(url: "https://github.com/jb55/secp256k1.swift.git", branch: "main")
+    ]
 #endif
 
 let package = Package(
@@ -35,12 +41,10 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "Nostr",
-            dependencies: [],
             exclude: []
         ),
         .testTarget(
             name: "NostrTests",
-            dependencies: [],
             exclude: []
         ),
     ]

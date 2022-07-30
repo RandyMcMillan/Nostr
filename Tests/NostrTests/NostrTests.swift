@@ -1,5 +1,5 @@
 import XCTest
-@testable import nostr
+@testable import Nostr
 
 final class nostrTests: XCTestCase {
     func testExample() throws {
