@@ -18,12 +18,12 @@ let dependencies: [Package.Dependency]
 #endif
 
 let package = Package(
-    name: "nostr",
+    name: "Nostr",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "nostr",
-            targets: ["nostr", "nostrTests"]),
+            name: "Nostr",
+            targets: ["Nostr", "NostrTests"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -34,12 +34,12 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "nostr",
+            name: "Nostr",
             dependencies: [],
             exclude: []
         ),
         .testTarget(
-            name: "nostrTests",
+            name: "NostrTests",
             dependencies: [],
             exclude: []
         ),
